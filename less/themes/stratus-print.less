@@ -305,20 +305,20 @@ button {
             line-height: inherit;
             padding-top: 4px;
             border: 0;
+            i { margin-top: 8px; }
         }
         > a {
             color: white;
             &:hover { color: white; }
         }
         .panel-footer {
-            background-color: fade(@teal, 98%);
-            box-shadow: inset 0px 1px 5px darken(@teal, 5%);
-            border-top: 0;
+            border: 0;
         }
     }
 
     .dropdown-menu {
         text-shadow: none;
+        i { color: black !important; }
     }
 }
 .panel-default {
@@ -335,7 +335,8 @@ button {
             color: @mint;
         }
 
-        button {
+        button,
+        .open button {
             background: @teal-dark;
             border-color: @teal-darker;
             color: white;
@@ -366,7 +367,8 @@ button {
             color: lighten(@kashmir, 45%);
         }
 
-        button {
+        button,
+        .open button {
             background: darken(@kashmir, 15%);
             color: white;
             border-color: darken(@kashmir, 25%);
@@ -396,7 +398,8 @@ button {
             color: lighten(#dff0d8, 45%);
         }
 
-        button {
+        button,
+        .open button {
             background: darken(@kashmir, 15%);
             color: #528A52;
             border-color: darken(@kashmir, 25%);
@@ -425,7 +428,8 @@ button {
             color: lighten(#d9edf7, 45%);
         }
 
-        button {
+        button,
+        .open button {
             background: darken(#d9edf7, 15%);
             border-color: darken(#d9edf7, 25%);
             i { color: white; }
@@ -453,7 +457,8 @@ button {
             color: lighten(#fcf8e3, 45%);
         }
 
-        button {
+        button,
+        .open button {
             background: darken(#fcf8e3, 15%);
             border-color: darken(#fcf8e3, 25%);
             i { color: white; }
@@ -481,7 +486,8 @@ button {
             color: lighten(#f2dede, 45%);
         }
 
-        button {
+        button,
+        .open button {
             background: darken(#f2dede, 15%);
             border-color: darken(#f2dede, 25%);
             i { color: white; }
@@ -498,43 +504,86 @@ button {
 }
 
 .panel-blue {
-    border-color: #1AA5CC;
+    border-color: @ballblue;
     .panel-heading {
-        border-color: #1AA5CC;
+        border-color: @ballblue;
         color: white;
-        background-color: #1AA5CC;
+        background-color: @ballblue;
     }
     a {
-        color: #1AA5CC;
+        color: @ballblue;
         &:hover {
-            color: darken(#1AA5CC, 15%);
+            color: darken(@ballblue, 15%);
+        }
+    }
+    &.metric {
+        text-shadow: 1px 1px 0px darken(@ballblue, 8%);
+        .panel-footer {
+            background-color: fade(@teal, 98%);
+            box-shadow: inset 0px 1px 5px darken(@teal, 5%);
+            text-shadow: 1px 1px 0px darken(@teal, 8%);
+            border-top: 0;
+            &:hover {
+                background-color: fade(@teal, 96%);
+            }
+            &:focus,
+            &:active {
+                background-color: darken(@teal, 1%);
+            }
         }
     }
 }
 
 .panel-green {
     &.metric {
+        text-shadow: 1px 1px 0px darken(@brand-success, 8%);
         .panel-footer {
             background-color: darken(@brand-success, 20%);
             box-shadow: inset 0px 1px 5px darken(@brand-success, 25%);
+            text-shadow: 1px 1px 0px darken(@brand-success, 28%);
+            &:hover {
+                background-color: darken(@brand-success, 18%);
+            }
+            &:focus,
+            &:active {
+                background-color: darken(@brand-success, 22%);
+            }
         }
     }
 }
 
 .panel-yellow {
     &.metric {
+        text-shadow: 1px 1px 0px darken(@brand-warning, 8%);
         .panel-footer {
             background-color: darken(@brand-warning, 20%);
             box-shadow: inset 0px 1px 5px darken(@brand-warning, 25%);
+            text-shadow: 1px 1px 0px darken(@brand-warning, 28%);
+            &:hover {
+                background-color: darken(@brand-warning, 19%);
+            }
+            &:focus,
+            &:active {
+                background-color: darken(@brand-warning, 22%);
+            }
         }
     }
 }
 
 .panel-red {
     &.metric {
+        text-shadow: 1px 1px 0px darken(@brand-danger, 8%);
         .panel-footer {
             background-color: darken(@brand-danger, 20%);
             box-shadow: inset 0px 1px 5px darken(@brand-danger, 25%);
+            text-shadow: 1px 1px 0px darken(@brand-danger, 28%);
+            &:hover {
+                background-color: darken(@brand-danger, 18%);
+            }
+            &:focus,
+            &:active {
+                background-color: darken(@brand-danger, 22%);
+            }
         }
     }
 }
@@ -577,6 +626,7 @@ button {
     thead {
         background-color: @bluelagoon;
         color: white;
+        text-shadow: 1px 1px 0px darken(@bluelagoon, 10%);
     }
 }
 
